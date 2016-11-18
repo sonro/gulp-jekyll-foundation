@@ -1,4 +1,26 @@
 <nav>
-	<li><a href="index.html">Home</a></li>
-	<li><a href="test.html">Test</a></li>
+	<ul class="{{include.navclass}}">
+		<li><a href="index.html" 
+
+			class="{% if page.url == '/'%}
+				current
+			{% endif %}"
+			>Home</a></li>
+
+		<li><a href="test.html"
+
+			class="{% if page.url == '/test.html'%}
+				current
+			{% endif %}"
+
+			>Test</a></li>
+
+		<li><a href="news.html"
+
+			class="{% if page.url == '/news.html'%}
+				current
+			{% endif %}"
+
+			>News</a></li>
+	</ul>
 </nav>
