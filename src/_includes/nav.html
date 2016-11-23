@@ -1,23 +1,23 @@
 <nav>
 	<ul class="{{include.navclass}}">
-		<li><a href="index.html" 
+		<li><a href="{{site.baseurl}}/" 
 
 			class="{% if page.url == '/'%}
 				current
 			{% endif %}"
 			>Home</a></li>
 
-		<li><a href="test.html"
+		<li><a href="{{site.baseurl}}/test/"
 
-			class="{% if page.url == '/test.html'%}
+			class="{% if page.url == '/test/'%}
 				current
 			{% endif %}"
 
 			>Test</a></li>
 
-		<li><a href="news.html"
+		<li><a href="{{site.baseurl}}/news/"
 
-			class="{% if page.url == '/news.html'%}
+			class="{% if page.url == '/news/'%}
 				current
 			{% endif %}"
 
