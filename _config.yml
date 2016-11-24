@@ -1,6 +1,8 @@
+name: "Jekyll + Foundation"
+baseurl: ""
+permalink: pretty
+
 source: "src"
 destination: "dist"
-baseurl: ""
 exclude: ["assets"]
 keep_files: ["assets"]
-permalink: pretty

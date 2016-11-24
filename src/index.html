@@ -1,31 +1,7 @@
 ---
 layout: default
-titleAfter: Stellar astronomical objects from the universe.
-meta: Discover many planets from the universe both inside and outside our Solar System.
 ---
 
-<section class="row column callout expanded">
-	<h2>Planet Types</h2>
-	<ul>
-		{% for planet in site.data.planet-types %}
-			<li>
-			<a href="{{site.baseurl}}/planets/{{planet.folder}}/">{{planet.title}}</a>
-			{{planet.content | markdownify}}
-			</li>
-		{% endfor %}
-	</ul>
-</section>
-
-
-<section>
-	<h2> Newly Discovered Planets</h2>
-
-	<ul>
-		{% for post in site.categories.recently-discovered limit:2 %}
-			<li>
-			<a href="{{post.url}}">{{post.title}}</a>
-			<p>{{post.meta}}</p>
-			</li>
-		{% endfor %}
-	</ul>
-</section>
+<header class="callout primary extended text-center">
+	<h1>{{site.name}}</h1>
+</header>

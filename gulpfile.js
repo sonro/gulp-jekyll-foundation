@@ -114,5 +114,5 @@ gulp.task('default', ['build', 'watch']);
  * Clean Task
  */
 gulp.task('clean', function() {
-    return del([PATHS.dist]);     
+    return del([PATHS.dist + '**/*']);     
 });
