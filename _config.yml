@@ -3,3 +3,4 @@ destination: "dist"
 baseurl: ""
 exclude: ["assets"]
 keep_files: ["assets"]
+permalink: pretty

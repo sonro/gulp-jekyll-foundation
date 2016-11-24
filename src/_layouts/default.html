@@ -4,12 +4,18 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{page.title}}</title>
+		<title>{% if page.title %}
+				{{page.title}} - 
+			{% endif %} Planets of the Universe {% if page.titleAfter %} - 
+				{{page.titleAfter}}{% endif %}</title>
 		<link rel="stylesheet" href="{{site.baseurl}}/assets/css/app.css">
+		<meta name="description" content="{{page.meta}}">
 	</head>
 	<body>
-		{% include nav.html navclass="nav-top" %}
-		<h1>{{page.title}}</h1>
+		<header class="masthead {{page.mastheadClass}}">
+			<h1>Planets of the Universe</h1>
+			{% include nav.html navclass="nav-top" %}
+		</header>
 		{{content}}
 		<script src="{{site.baseurl}}/assets/js/app.js"></script>
 	</body>

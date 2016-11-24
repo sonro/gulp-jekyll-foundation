@@ -7,17 +7,17 @@
 			{% endif %}"
 			>Home</a></li>
 
-		<li><a href="{{site.baseurl}}/test/"
+		<li><a href="{{site.baseurl}}/planets/"
 
-			class="{% if page.url == '/test/'%}
+			class="{% if page.url contains '/planets/'%}
 				current
 			{% endif %}"
 
-			>Test</a></li>
+			>Planets</a></li>
 
 		<li><a href="{{site.baseurl}}/news/"
 
-			class="{% if page.url == '/news/'%}
+			class="{% if page.url contains 'news' or page.url contains 'recently-discovered'%}
 				current
 			{% endif %}"
 

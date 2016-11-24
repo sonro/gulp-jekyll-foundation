@@ -28,7 +28,7 @@ var messages = {
  */
 gulp.task('jekyll-build', function(done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build', '--incremental' ], {stdio: 'inherit'})
+    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -49,7 +49,7 @@ gulp.task('sass', function() {
         .pipe($.autoprefixer({
             browsers: COMPATIBILITY
         }))
-        .pipe($.uncss(UNCSS_OPTIONS))
+        // .pipe($.uncss(UNCSS_OPTIONS))
         .pipe($.cssnano())
         .pipe(gulp.dest(PATHS.dist + '/assets/css'))
         .pipe(browserSync.reload({stream:true}));
@@ -98,7 +98,7 @@ gulp.task('build', ['sass', 'script', 'images', 'jekyll-build'], function() {
 gulp.task('watch', function() {
     gulp.watch('src/assets/scss/**', ['sass']);
     gulp.watch(
-        ['src/*.html', 'src/_layouts/*.html', 'src/_includes/*.html', 'src/_posts/**'], 
+        ['src/**/*.html', 'src/_layouts/*.html', 'src/_includes/*.html', 'src/_posts/**'], 
         ['jekyll-rebuild']);
     gulp.watch('src/assets/js/**', ['script', 'browser-sync']);
     gulp.watch('src/assets/img/**', ['images', 'browser-sync']);
