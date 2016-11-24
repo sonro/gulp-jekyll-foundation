@@ -28,11 +28,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-sites-template.git"
+    "url": "https://github.com/sonro/-sites-template.git"
   },
   "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
     "email": "sonro@gmx.com"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "author": "sonro <sonro@gmx.com>",
   "license": "MIT",
