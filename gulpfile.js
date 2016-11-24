@@ -4,6 +4,7 @@ var browserSync = require('browser-sync');
 var cp = require('child_process');
 var yaml = require('js-yaml');
 var fs   = require('fs');
+var del = require('del');
 var plumber = require('gulp-plumber');
 var $    = require('gulp-load-plugins')();
 
@@ -108,3 +109,10 @@ gulp.task('watch', function() {
  * Default Task
  */
 gulp.task('default', ['build', 'watch']);
+
+/**
+ * Clean Task
+ */
+gulp.task('clean', function() {
+    return del([PATHS.dist]);     
+});
